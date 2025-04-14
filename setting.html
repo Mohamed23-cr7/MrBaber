@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings - Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #111;
+      padding: 30px;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d4af37;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #fff;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #d4af37;
+      border-radius: 5px;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .btn-gold {
+      background-color: #d4af37;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .btn-gold:hover {
+      background-color: #b89c30;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Settings</h2>
+
+  <div class="section">
+    <h3 style="color:#d4af37;">Edit Profile</h3>
+    <form>
+      <label>Full Name</label>
+      <input type="text" placeholder="John Doe">
+
+      <label>Email</label>
+      <input type="email" placeholder="john@example.com">
+
+      <label>Phone Number</label>
+      <input type="text" placeholder="+94XXXXXXXXX">
+
+      <button class="btn-gold" type="submit">Save Changes</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h3 style="color:#d4af37;">Change Password</h3>
+    <form>
+      <label>New Password</label>
+      <input type="password" placeholder="New Password">
+
+      <label>Confirm Password</label>
+      <input type="password" placeholder="Confirm Password">
+
+      <button class="btn-gold" type="submit">Update Password</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h3 style="color:#d4af37;">Notification Settings</h3>
+    <form>
+      <label>Receive Appointment Reminders</label>
+      <select>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Receive Promotions</label>
+      <select>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <button class="btn-gold" type="submit">Save Preferences</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

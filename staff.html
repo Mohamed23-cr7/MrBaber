@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Staff Members - Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #d4af37;
+    }
+
+    .staff-card {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #111;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 calc(30% - 10px);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      background-color: #1a1a1a;
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #fff;
+      margin: 10px 0 5px 0;
+    }
+
+    .card p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    .profile-link {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .profile-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Staff Members</h2>
+  <div class="staff-card">
+    
+    <div class="card">
+      <img src="Image/OIP (1).jpg" alt="Upul">
+      <h3>Upul</h3>
+      <p>Specialty: Classic Fades & Beard Styling</p>
+      <p>Experience: 6 years</p>
+      <p>Email: upul@example.com</p>
+      <a class="profile-link" href="upul.html">View Profile</a>
+    </div>
+
+    <div class="card">
+      <img src="Image/image.jpg" alt="Kumar">
+      <h3>Kumar</h3>
+      <p>Specialty: Hair Art & Creative Cuts</p>
+      <p>Experience: 4 years</p>
+      <p>Email: kumar@example.com</p>
+      <a class="profile-link" href="kumar.html">View Profile</a>
+    </div>
+
+    <div class="card">
+      <img src="Image/qualities-of-a-highly-professional-barber.jpg" alt="Sameer">
+      <h3>Sameer</h3>
+      <p>Specialty: Women’s Hair Styling & Treatments</p>
+      <p>Experience: 5 years</p>
+      <p>Email: sameer@example.com</p>
+      <a class="profile-link" href="sameer.html">View Profile</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

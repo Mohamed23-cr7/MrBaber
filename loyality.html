@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loyalty Program - Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #111;
+      border-radius: 12px;
+      border: 2px solid #d4af37;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    }
+
+    h2 {
+      color: #d4af37;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .points {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      padding: 15px;
+      background-color: #222;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    .points span {
+      font-weight: bold;
+    }
+
+    .rewards-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rewards-item {
+      background-color: #333;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+    }
+
+    .rewards-item button {
+      background-color: #d4af37;
+      border: none;
+      padding: 10px 20px;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .rewards-item button:hover {
+      background-color: #000;
+      color: #d4af37;
+    }
+
+    .btn-gold {
+      background-color: #d4af37;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn-gold:hover {
+      background-color: #000;
+      color: #d4af37;
+    }
+
+    @media (max-width: 768px) {
+      .points {
+        font-size: 1rem;
+      }
+
+      .rewards-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .rewards-item button {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Barbershop Loyalty Program</h2>
+  
+  <div class="points">
+    <span>Your Points: 250</span>
+    <span>Next Reward: Free Haircut (300 points)</span>
+  </div>
+
+  <h3>Available Rewards</h3>
+  <ul class="rewards-list">
+    <li class="rewards-item">
+      <span>Free Haircut</span>
+      <span>300 Points</span>
+      <button>Redeem</button>
+    </li>
+    <li class="rewards-item">
+      <span>Free Beard Trim</span>
+      <span>200 Points</span>
+      <button>Redeem</button>
+    </li>
+    <li class="rewards-item">
+      <span>10% Discount</span>
+      <span>150 Points</span>
+      <button>Redeem</button>
+    </li>
+    <li class="rewards-item">
+      <span>Free Shave</span>
+      <span>100 Points</span>
+      <button>Redeem</button>
+    </li>
+  </ul>
+
+  <a href="rewards-history.html" class="btn-gold">View Reward History</a>
+</div>
+
+</body>
+</html>

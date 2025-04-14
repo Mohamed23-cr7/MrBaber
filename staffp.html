@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Staff Profile - Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #111;
+      border-radius: 12px;
+      border: 2px solid #d4af37;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    }
+
+    h2 {
+      color: #d4af37;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .staff-profile {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .profile-card {
+      background-color: #222;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .profile-card:hover {
+      background-color: #1a1a1a;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      border: 3px solid #d4af37;
+      margin-bottom: 20px;
+    }
+
+    .profile-card h3 {
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .profile-card p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    .btn-view {
+      margin-top: 20px;
+      padding: 8px 20px;
+      background-color: #d4af37;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-view:hover {
+      background-color: #000;
+      color: #d4af37;
+    }
+
+    @media (max-width: 768px) {
+      .staff-profile {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-card {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Our Talented Barbers</h2>
+  <div class="staff-profile">
+    
+    <div class="profile-card">
+      <div class="profile-image">
+        <img src="Image/OIP (1).jpg" alt="Upul's Profile Picture">
+      </div>
+      <h3>Upul</h3>
+      <p>Role: Barber</p>
+      <p>Specialty: Fades</p>
+      <p>Joined: Jan 2023</p>
+      <a href="upul.html" class="btn-view">View Profile</a>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-image">
+        <img src="Image/image.jpg" alt="Kumar's Profile Picture">
+      </div>
+      <h3>Kumar</h3>
+      <p>Role: Barber</p>
+      <p>Specialty: Beard Styling</p>
+      <p>Joined: Mar 2022</p>
+      <a href="kumar.html" class="btn-view">View Profile</a>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-image">
+        <img src="Image/qualities-of-a-highly-professional-barber.jpg" alt="Sameer's Profile Picture">
+      </div>
+      <h3>Sameer</h3>
+      <p>Role: Barber</p>
+      <p>Specialty: Hair Art</p>
+      <p>Joined: June 2021</p>
+      <a href="sameer.html" class="btn-view">View Profile</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

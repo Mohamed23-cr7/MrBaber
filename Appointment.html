@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Appointment - Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 40px;
+      background-color: #111;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+      text-align: center;
+    }
+
+    h2 {
+      color: #d4af37;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    label {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #fff;
+      text-align: left;
+      display: block;
+      margin-top: 10px;
+    }
+
+    select, input[type="date"], input[type="time"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      background-color: #333;
+      border: 2px solid #d4af37;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    select:focus, input[type="date"]:focus, input[type="time"]:focus {
+      outline: none;
+      border-color: #d4af37;
+    }
+
+    button {
+      background-color: #d4af37;
+      color: #000;
+      border: none;
+      padding: 14px 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #b5942b;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Book Your Appointment</h2>
+  <form>
+    <label for="service">Choose Service</label>
+    <select id="service">
+      <option>Haircut</option>
+      <option>Beard Trim</option>
+      <option>Haircut & Beard Trim</option>
+      <option>Shaving</option>
+    </select>
+
+    <label for="barber">Choose Barber</label>
+    <select id="barber">
+      <option>John</option>
+      <option>David</option>
+      <option>Lisa</option>
+    </select>
+
+    <label for="date">Date</label>
+    <input type="date" id="date">
+
+    <label for="time">Time</label>
+    <input type="time" id="time">
+
+    <button type="submit">Confirm Appointment</button>
+  </form>
+</div>
+
+</body>
+</html>

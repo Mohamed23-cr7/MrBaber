@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Barbers - Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d4af37;
+      margin-bottom: 40px;
+    }
+
+    .barber-profile {
+      display: flex;
+      align-items: flex-start;
+      background-color: #111;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .barber-profile img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #d4af37;
+    }
+
+    .barber-details {
+      flex: 1;
+    }
+
+    .barber-details h3 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .barber-details p {
+      color: #ccc;
+      margin: 8px 0;
+    }
+
+    .review {
+      margin-top: 10px;
+      background-color: #1a1a1a;
+      padding: 10px;
+      border-radius: 5px;
+      border-left: 4px solid #d4af37;
+    }
+
+    .review span {
+      display: block;
+      color: #d4af37;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .barber-profile {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .barber-details {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Our Barbers</h2>
+
+  <div class="barber-profile">
+    <img src="Image/OIP (1).jpg" alt="Upul">
+    <div class="barber-details">
+      <h3>Upul</h3>
+      <p>Specialty: Fades, Classic Cuts</p>
+      <p>⭐⭐⭐⭐⭐ (32 Reviews)</p>
+      <div class="review">
+        <span>Saman:</span>
+        "John gives the best fades in town. I always leave feeling fresh and confident. Highly recommend!"
+      </div>
+      <div class="review">
+        <span>Andrew:</span>
+        "Always consistent and professional. John knows how to keep my style sharp!"
+      </div>
+    </div>
+  </div>
+
+  <div class="barber-profile">
+    <img src="Image/image.jpg" alt="Kumar">
+    <div class="barber-details">
+      <h3>Kumar</h3>
+      <p>Specialty: Beard Styling, Creative Lineups</p>
+      <p>⭐⭐⭐⭐ (20 Reviews)</p>
+      <div class="review">
+        <span>Raj:</span>
+        "David transformed my beard! Smooth trim, friendly vibe, and great attention to detail."
+      </div>
+      <div class="review">
+        <span>Hassan:</span>
+        "He’s the beard wizard. Gave me a whole new look and confidence boost."
+      </div>
+    </div>
+  </div>
+
+  <div class="barber-profile">
+    <img src="Image/qualities-of-a-highly-professional-barber.jpg" alt="Sameer">
+    <div class="barber-details">
+      <h3>Sameer</h3>
+      <p>Specialty: Hair Art & Modern Styling</p>
+      <p>⭐⭐⭐⭐⭐ (27 Reviews)</p>
+      <div class="review">
+        <span>Mohamed:</span>
+        "Mike is super creative. If you want something trendy and bold, he's the guy!"
+      </div>
+      <div class="review">
+        <span>Harish:</span>
+        "Always happy with Mike’s cuts. He has an artistic touch you won’t find anywhere else."
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

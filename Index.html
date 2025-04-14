@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #111;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #d4af37;
+    }
+
+    label {
+      font-size: 15px;
+      color: #ccc;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #d4af37;
+      border-radius: 6px;
+      background-color: #000;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #fff;
+    }
+
+    .btn-gold {
+      width: 100%;
+      padding: 12px;
+      background-color: #d4af37;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-gold:hover {
+      background-color: #c29d29;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        margin: 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login to Barbershop</h2>
+    <form id="loginForm">
+      <label for="email">Email</label><br>
+      <input type="email" id="email" placeholder="Enter your email" required /><br>
+
+      <label for="password">Password</label><br>
+      <input type="password" id="password" placeholder="Enter your password" required /><br>
+
+      <button class="btn-gold" type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get form values
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      // Basic form validation (you can enhance this)
+      if (email && password) {
+        // If both email and password are provided, redirect to Home.html
+        window.location.href = "Home.html";
+      } else {
+        // If fields are empty, show an alert
+        alert("Please fill in both fields.");
+      }
+    });
+  </script>
+
+</body>
+</html>

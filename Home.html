@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr. Barber</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .gold-border {
+      border-color: #D4AF37;
+    }
+    .gold-text {
+      color: #D4AF37;
+    }
+    .gold-bg {
+      background-color: #D4AF37;
+    }
+  </style>
+</head>
+<body class="bg-black text-white scroll-smooth">
+
+
+  <header class="flex justify-between items-center p-4 border-b gold-border sticky top-0 bg-black z-50">
+    <h1 class="text-2xl font-bold gold-text">Mr. Barber</h1>
+    <nav class="space-x-4">
+      <a href="staffp.html" class="hover:text-yellow-400 transition">Home</a>
+      <a href="Appointment.html" class="hover:text-yellow-400 transition">Book Appointment</a>
+      <a href="Walk.html" class="hover:text-yellow-400 transition">Walk-In Queue</a>
+      <a href="Rev.html" class="hover:text-yellow-400 transition">Barbers</a>
+      <a href="loyality.html" class="hover:text-yellow-400 transition">Loyalty</a>
+
+      <!-- Dropdown for Admin and Barbers -->
+      <div class="relative inline-block text-left">
+        <button class="hover:text-yellow-400 transition flex items-center">
+          <span>User</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+        <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-black text-white ring-1 ring-black ring-opacity-5">
+          <div class="py-1" role="none">
+            <a href="AdminHome.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600" role="menuitem">Admin</a>
+            <a href="staffHome.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600" role="menuitem">Barbers</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Button -->
+      <a href="setting.html" class="hover:text-yellow-400 transition">Settings</a>
+
+    </nav>
+  </header>
+
+
+  <section id="home" class="text-center py-20 px-4 border-b gold-border">
+    <h2 class="text-4xl font-bold mb-4 gold-text">Welcome to Mr. Barber</h2>
+    <p class="text-lg max-w-2xl mx-auto">Your go-to spot in Colombo 3 for stylish haircuts and professional grooming. Book online or walk in for an exceptional experience.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 mt-20">
+    <div class="container mx-auto text-center">
+      <div class="space-y-4">
+        <p class="text-lg">Visit us at: <span class="font-semibold">Colombo 3, Sri Lanka</span></p>
+        <p class="text-lg">Contact us via email: <span class="font-semibold">mrbaber@gmail.com</span></p>
+        <p class="text-lg">Call us: <span class="font-semibold">+94 77 123 4567</span></p>
+      </div>
+      <p class="mt-4 text-sm">© 2025 Mr. Barber. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript for smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+
+    // Toast notifications
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.textContent = message;
+      toast.className = 'fixed bottom-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded shadow-lg';
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+    }
+
+    document.querySelector('#bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const inputs = this.querySelectorAll('input, select');
+      for (let input of inputs) {
+        if (!input.value || input.value.includes('Select')) {
+          showToast("Please fill in all fields correctly.");
+          return;
+        }
+      }
+      showToast("Appointment booked successfully!");
+      this.reset();
+    });
+
+    document.querySelector('#queueForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = this.querySelector('input[type="text"]').value;
+      const phone = this.querySelector('input[type="tel"]').value;
+      if (!name || !phone) {
+        showToast("Please enter your name and phone number.");
+        return;
+      }
+      showToast("You have joined the walk-in queue!");
+      this.reset();
+    });
+
+    document.querySelector('#loyaltyButton').addEventListener('click', function () {
+      showToast("Welcome to our Loyalty Program!");
+    });
+  </script>
+
+</body>
+</html>

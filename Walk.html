@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Walk-In Queue - Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #222;
+      border-radius: 12px;
+      border: 2px solid #d4af37;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    }
+
+    h2 {
+      color: #d4af37;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .queue-info {
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+      padding: 15px;
+      background-color: #333;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    .queue-info span {
+      font-weight: bold;
+    }
+
+    label {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      background-color: #444;
+      color: #fff;
+    }
+
+    button {
+      background-color: #d4af37;
+      color: #000;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #000;
+      color: #d4af37;
+    }
+
+    .btn-gold {
+      background-color: #d4af37;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.2rem;
+      text-decoration: none;
+      display: block;
+      margin: 20px auto;
+      transition: background-color 0.3s;
+    }
+
+    .btn-gold:hover {
+      background-color: #000;
+      color: #d4af37;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .queue-info {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Join the Walk-In Queue</h2>
+
+  <div class="queue-info">
+    <p>Current Wait Time: <span>15-30 minutes</span></p>
+    <p>Available Barbers: <span>John, David, Mike</span></p>
+  </div>
+
+  <form>
+    <label for="name">Enter Your Name</label>
+    <input type="text" id="name" placeholder="Your Name" required><br>
+
+    <label for="service">Select Service</label>
+    <select id="service" required>
+      <option value="haircut">Haircut</option>
+      <option value="beard-trim">Beard Trim</option>
+      <option value="shave">Shave</option>
+    </select><br>
+
+    <label for="barber">Choose Barber</label>
+    <select id="barber" required>
+      <option value="john">John</option>
+      <option value="david">David</option>
+      <option value="mike">Mike</option>
+    </select><br>
+
+    <button type="submit">Join Queue</button>
+  </form>
+
+  <a href="queue-status.html" class="btn-gold">View Queue Status</a>
+</div>
+
+</body>
+</html>
